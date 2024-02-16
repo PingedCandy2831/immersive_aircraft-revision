@@ -2,28 +2,33 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "CNC",
-    "NEN",
+    "BEB",
     "RRR"
   ],
   "key": {
     "C": [
       {
-        "item": "minecraft:slime_ball"
+        "item": "immersive_aircraft:sturdy_pipes"
       }
     ],
     "R": [
       {
-        "item": "minecraft:brick"
+        "item": "minecraft:obsidian"
       }
     ],
-    "N": [
+    "B": [
       {
-        "item": "minecraft:gold_ingot"
+        "item": "minecraft:water_bucket"
       }
     ],
     "E": [
       {
         "item": "immersive_aircraft:engine"
+      }
+    ],
+    "N": [
+      {
+        "item": "immersive_aircraft:enhanced_propeller"
       }
     ]
   },
