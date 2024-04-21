@@ -73,7 +73,7 @@ public class RotaryCannon extends BulletWeapon {
     @Override
     public void clientFire(int index) {
         float old = rotationalManager.roll;
-        rotationalManager.roll += 0.25f;
+        rotationalManager.roll += 1.0f;
 
         if (Math.floor(old) != Math.floor(rotationalManager.roll)) {
             NetworkHandler.sendToServer(new FireMessage(getSlot(), index, getDirection()));
