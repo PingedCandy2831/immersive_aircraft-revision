@@ -70,33 +70,6 @@ public abstract class BulletWeapon extends Weapon {
     }
 
     protected boolean spentAmmo(Map<String, Integer> ammunition, int amount) {
-        if (ammo < amount && getEntity() instanceof InventoryVehicleEntity vehicle) {
-            for (int i = 0; i < vehicle.getInventory().getContainerSize(); i++) {
-                ItemStack stack = vehicle.getInventory().getItem(i);
-
-                String key = BuiltInRegistries.ITEM.getKey(stack.getItem()).toString();
-
-                if (ammunition.containsKey(key)) {
-                    ammo += ammunition.get(key);
-                    ammoStack = stack.copy();
-
-                    stack.shrink(1);
-
-                    if (ammo >= amount) {
-                        break;
-                    }
-                }
-            }
-        }
-
-        if (ammo <= 0) {
-            if (getEntity().getControllingPassenger() instanceof Player player) {
-                player.displayClientMessage(Component.translatable("immersive_aircraft.out_of_ammo"), true);
-            }
-            return false;
-        }
-
-        ammo -= amount;
         return true;
     }
 

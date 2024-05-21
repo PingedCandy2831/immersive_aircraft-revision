@@ -14,7 +14,7 @@ import org.joml.Vector3f;
 import org.joml.Vector4f;
 
 public class BombBay extends BulletWeapon {
-    private static final float MAX_COOLDOWN = 1.0f;
+    private static final float MAX_COOLDOWN = 0.1f;
     private float cooldown = 0.0f;
 
     public BombBay(VehicleEntity entity, ItemStack stack, WeaponMount mount, int slot) {
@@ -51,9 +51,7 @@ public class BombBay extends BulletWeapon {
 
     @Override
     public void fire(Vector3f direction) {
-        if (spentAmmo(Config.getInstance().bombBayAmmunition, 20)) {
-            super.fire(direction);
-        }
+        super.fire(direction);
     }
 
     @Override

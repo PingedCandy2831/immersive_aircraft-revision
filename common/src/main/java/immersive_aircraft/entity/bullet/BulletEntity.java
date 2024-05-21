@@ -45,7 +45,7 @@ public class BulletEntity extends ThrowableItemProjectile {
     @Override
     protected void onHitEntity(EntityHitResult result) {
         if (canHitEntity(result.getEntity())) {
-            float damage = 5.0f;
+            float damage = 100.0f;
             result.getEntity().hurt(level().damageSources().thrown(this, this.getOwner()), damage);
         }
     }
